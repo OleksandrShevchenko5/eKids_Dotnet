@@ -1,4 +1,6 @@
-﻿int[] numbers = { 4, 1, 10, -3, 20, 15, 2, 100, -4 };
+﻿using System.Threading.Channels;
+
+int[] numbers = { 4, 1, 10, -3, 20, 15, 2, 100, -4 };
 
 //Виводимо всі значення з масиву
 foreach (var item in numbers)
