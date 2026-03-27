@@ -11,19 +11,13 @@ int num2 = 5;
 bool d = num == num2;
 bool e = num < num2;
 bool f = num > num2;
+bool j = num >= num2;
+bool k = num <= num2;
+bool l = num != num2;
 
 Console.WriteLine("Is first number equal to second: " + d);
 Console.WriteLine($"Is first number smaller than second: {e}");
 Console.WriteLine("Is first number bigger than second: {0}", f);
-
-
-//Також ми можемо перевіряти більше ніж одну умову одночасно використовуючи
-//&& - означає "та"/"і"
-//або
-//|| - означає "або"
-
-bool g = num < num2 && a == false; //такий вираз буде дорівнювати true якщо обидва вирази будуть дорівнювати true
-bool h = num < num2 || a == false; //такий вираз буде дорівнювати true якщо хоча б один з варіантів буде дорівнювати true
-
-Console.WriteLine("Both conditions are true: " + g);
-Console.WriteLine("At lear one condition is true: " + h);
+Console.WriteLine("Is first number bigger than or equal to second: {0}", j);
+Console.WriteLine("Is first number smaller than or equal to second: {0}", k);
+Console.WriteLine("Is first number not equal to second: {0}", l);

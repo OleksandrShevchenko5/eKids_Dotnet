@@ -1,15 +1,16 @@
-﻿Console.Write("This is our second lesson!");
-Console.Write("Not the first!");
-Console.WriteLine("Not the last!");
-Console.Write("Second!");
+﻿Console.Write("This is our second lesson! ");
+Console.Write("Not the first! ");
+Console.WriteLine("Not the last! ");
+Console.WriteLine("Second! ");
 
-Console.WriteLine("Key:");
-ConsoleKeyInfo key = Console.ReadKey();
+Console.Write("Int number: ");
 
-Console.WriteLine("String:");
+int number = int.Parse(Console.ReadLine());
+
+Console.Write("String:");
 string text = Console.ReadLine();
 
 Console.Clear();
 
-Console.WriteLine("Key: " + key.KeyChar);
 Console.WriteLine("String: " + text);
+Console.WriteLine("Number: " + number);
