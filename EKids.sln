@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch-Case", "Switch-Case\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TernaryOperator", "TernaryOperator\TernaryOperator.csproj", "{23DD05A7-AF19-44D1-8497-F3A94FA3075D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMethodsAndProperties", "ConsoleMethodsAndProperties\ConsoleMethodsAndProperties.csproj", "{CC1CAC5F-9B3B-4DE7-922E-B032FA840613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariablesMethodsAndProperties", "VariablesMethodsAndProperties\VariablesMethodsAndProperties.csproj", "{15F616B0-975D-4A26-AF24-613B13D22CC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,14 @@ Global
 		{23DD05A7-AF19-44D1-8497-F3A94FA3075D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23DD05A7-AF19-44D1-8497-F3A94FA3075D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23DD05A7-AF19-44D1-8497-F3A94FA3075D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1CAC5F-9B3B-4DE7-922E-B032FA840613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1CAC5F-9B3B-4DE7-922E-B032FA840613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1CAC5F-9B3B-4DE7-922E-B032FA840613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1CAC5F-9B3B-4DE7-922E-B032FA840613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F616B0-975D-4A26-AF24-613B13D22CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F616B0-975D-4A26-AF24-613B13D22CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F616B0-975D-4A26-AF24-613B13D22CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F616B0-975D-4A26-AF24-613B13D22CC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +120,8 @@ Global
 		{8E924C61-A9F6-493E-B135-91FCDCE40D1A} = {32542495-1577-4E0E-8070-32871E902F2E}
 		{20664926-3625-4493-9CE3-0C2C8D800116} = {32542495-1577-4E0E-8070-32871E902F2E}
 		{23DD05A7-AF19-44D1-8497-F3A94FA3075D} = {32542495-1577-4E0E-8070-32871E902F2E}
+		{CC1CAC5F-9B3B-4DE7-922E-B032FA840613} = {32542495-1577-4E0E-8070-32871E902F2E}
+		{15F616B0-975D-4A26-AF24-613B13D22CC0} = {32542495-1577-4E0E-8070-32871E902F2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1A85E37-0616-49DE-BBF9-E08A38D1B421}

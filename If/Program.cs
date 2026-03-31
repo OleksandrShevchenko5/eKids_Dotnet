@@ -1,21 +1,70 @@
-﻿namespace If
+﻿Console.WriteLine("Enter your name:");
+string username = Console.ReadLine();
+
+if (username == "")
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-            //Також ми можемо перевіряти більше ніж одну умову одночасно використовуючи
-            //&& - означає "та"/"і"
-            //або
-            //|| - означає "або"
-            //! - означає "не"/"заперечення"
+    Console.WriteLine("Your name should not be empty!");
+}
 
-            // bool g = num < num2 && a == false; //такий вираз буде дорівнювати true якщо обидва вирази будуть дорівнювати true
-            // bool h = num < num2 || a == false; //такий вираз буде дорівнювати true якщо хоча б один з варіантів буде дорівнювати true
+//---------------------------------------------------------------------------------
 
-            // Console.WriteLine("Both conditions are true: " + g);
-            // Console.WriteLine("At lear one condition is true: " + h);
-        }
-    }
+Console.WriteLine("Enter your password:");
+string password = Console.ReadLine();
+
+if (password != "")
+{
+    Console.WriteLine("Your password accepted!");
+}
+else
+{
+    Console.WriteLine("Your password should not be empty!");
+}
+
+//----------------------------------------------------------------------------------
+
+Console.WriteLine("Enter your email:");
+string email = Console.ReadLine();
+
+if (email == "")
+{
+    Console.WriteLine("Your email should not be empty!");
+}
+else if (!email.Contains('@'))
+{
+    Console.WriteLine("Your email should contain '@' symbol!");
+}
+else
+{
+    Console.WriteLine("Your email accepted!");
+}
+
+
+//------------------------------------------------------------------------------------
+Console.WriteLine("Enter your age:");
+int age = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Enter your height:");
+int height = int.Parse(Console.ReadLine());
+
+//Прийшовши в парк атракціонів, ми бачимо що на один з атракціонів можна увійти тільки якщо Ви старше 8 років та вище за 120 сантиметрів
+//На другий - Якщо старше 8 років АБО вище за 120 сантиметрів
+
+//Перший атракціон:
+if (age > 8 &&  height > 120)
+{
+    Console.WriteLine("Welcome!");
+}
+else
+{
+    Console.WriteLine("Sorry!");
+}
+
+//Другий атракціон:
+if (age > 8 ||  height > 120)
+{
+    Console.WriteLine("Welcome!");
+}
+else
+{
+    Console.WriteLine("Sorry!");
 }
