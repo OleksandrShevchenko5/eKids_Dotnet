@@ -1,44 +1,90 @@
 ﻿////Способи створення масивів:
-//int[] numbers = new int[3] { 1, 2, 3 }; //Створюємо масив елементів типу INT розміром в 3 елементи
-//int[] secondNumbers = new int[] { 1, 2, 3, 5, 6, 7, 8 }; //Створюємо масив елементів типу INT та дозволяємо програмі самій порахувати кількість елементів, які ми передали
-////та встановити, таким чином, розмір масиву
-//int[] anotherNumbers = [1, 2, 3]; //Спрощене створення масиву, програма бере тип даних відповідно то елементів, які ми додали в масиви
 
-//Console.WriteLine(secondNumbers[0]);//1
-//Console.WriteLine(numbers[2] + anotherNumbers[2]);//6
+//=========== Одновимірні масиви ===========
 
-//-----------------------------------------------------------------------------
+//==Оголошення із заданим розміром (без інінціалізації)==
+//Ви створюєте "порожній" масив певної довжини.
+//Елементи заповнюються значеннями за замовчуванням (для чисел це 0, для string - null).
 
-//int[,] twoDimensionArray = new int[3, 3]
-//{
-//   { 1, 5, 7 },
-//   { 2, 6, 4 },
-//   { 4, 5, 6 }
-//};
+int[] emptyArrayOfNumbers = new int[5]; // створиться порожній масив з п'яти нулів
+string[] emptyArrayOfStrings = new string[3]; // створиться порожній масив з трьох null
 
-//Console.WriteLine(twoDimensionArray[1, 2]);
 
-//twoDimensionArray[1, 2] = 1;
 
-//Console.WriteLine(twoDimensionArray[1,2]);
+//==Оголошення з ініціалізацією значень==
+//Ви одразу вказуєте, які дані мають бути в масиві. Компілятор сам порахує довжину.
 
-//int[][] multiDimensionNumbers = new int[3][];
-//multiDimensionNumbers[0] = new int[7];
-//multiDimensionNumbers[1] = new int[5] { 2, 4, 6, 7, 8 };
-//multiDimensionNumbers[2] = new int[] { 2, 3, 4, 5, 6, 6 };
+// Повний запис
+// вказуємо тип масиву і надаємо дані які мають бути в масиві,
+// довжина розраховується автоматично під час компіляції програми
+// і таким чином програмам сама встановить довжину масиву
+string[] weekend = new string[] { "Saturday", "Sunday" }; // довжина буде 2
 
-//------------------------------------------------------------
+// --Запис з неявною типізацією--
+// Вказуємо лише дані які мають бути в масиві,
+// довжина, та тип даних розраховуються автоматично
+var arrayOfDoubles = new[] { 10.5, 20.0, 15.75 }; // Тип буде double[], довжина - 3
 
-int[] numbers = [4, 6, 7, 12, 43, 2, 54, 23];
+// --Спрощені записи--
+// (найпопулярніший)
+string[] colors = { "Red", "Green", "Blue" };
+// (найсучасніший та найкоротший запис)
+int[] dayNumbers = [1, 2, 3, 4, 5];
 
-int first = numbers.First();
-int last = numbers.Last();
+
+//----Поради щодо використання----
+// new int[10] — коли знаєте тільки кількість елементів.
+//  { 1, 2, 3 } або [1, 2, 3] — коли знаєте самі значення.
+
+
+// ======= Читання елементів, Властивості та деякі методи масивів ========
+int[] numbers = [4, 12, 456, 38, -56, 19, 54, 23];
+
+int firstNumberByIndex = numbers[0];
+int firstNumberViaMethod = numbers.First();
+
+int lastNumberWithHurdcodedIndex = numbers[7];
+int lastNumberViaIndexFromArrayEnd = numbers[^1];
+int lastNumberViaMethod = numbers.Last();
 int arrayLength = numbers.Length;
 int arrayMax = numbers.Max();
 int arrayMin = numbers.Min();
 
-Console.WriteLine("First number: " + first);
-Console.WriteLine("Last number: " + last);
+Console.WriteLine("First number by index: " + firstNumberByIndex);
+Console.WriteLine("First number via method: " + firstNumberViaMethod);
+Console.WriteLine("Last number with hardcoded index: " + lastNumberWithHurdcodedIndex);
+Console.WriteLine("Last number via index: " + lastNumberViaIndexFromArrayEnd);
+Console.WriteLine("Last number via method: " + lastNumberViaMethod);
 Console.WriteLine("Array size: " + arrayLength);
 Console.WriteLine("Array max number: " + arrayMax);
 Console.WriteLine("Array min number: " + arrayMin);
+
+Array.Sort(numbers);
+Console.WriteLine("Sorted array");
+Array.ForEach(numbers, n => Console.Write(n + ", "));
+Console.WriteLine();
+
+
+Array.Reverse(numbers);
+Console.WriteLine("Reverted array");
+Array.ForEach(numbers, n => Console.Write($"{n}, "));
+Console.WriteLine();
+
+
+//===========2D або двовимірні масиви=============
+// Оголошення без інінціалізації
+// Ви вказуєте лише розміри (рядки та стовпці).
+int[,] twoDimensionalEmptyArray = new int[3, 4]; // створиться порожній 2D масив з 3 рядками та 4 стовпцями, заповнений нулями
+
+// --Запис з неявною типізацією--
+// Вказуємо лише дані які мають бути в масиві,
+// довжина, та тип даних розраховуються автоматично
+string[,] cinemaHall = {
+    { "James", "Robert", "Mary", "Michael" },   // Row 0
+    { "Linda", "Susan", "John", "Sarah" },      // Row 1
+    { "David", "Karen", "Thomas", "Emily" }     // Row 2
+};
+
+
+Console.WriteLine(cinemaHall[2, 1]); //Хто сидить у 3 рядку на 2 місці? (Karen)
+Console.WriteLine(cinemaHall[cinemaHall.GetLength(0) - 1, cinemaHall.GetLength(1) - 1]); //Хто сидить у останньому рядку на останньому місці? (Emily)
