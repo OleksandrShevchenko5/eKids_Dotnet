@@ -1,9 +1,13 @@
-﻿namespace Methods
+﻿using System.Text;
+
+namespace Methods
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             // ===== ПРИКЛАД 1: Найпростіший метод (без параметрів, без return) =====
             Console.WriteLine("📌 ПРИКЛАД 1: Простий метод без параметрів");
             Console.WriteLine("─────────────────────────────────────────────");
