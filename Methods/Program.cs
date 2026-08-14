@@ -72,6 +72,16 @@ namespace Methods
             Console.WriteLine("\n📌 ПРИКЛАД 13: Random - Генератор випадкових чисел");
             Console.WriteLine("─────────────────────────────────────────────");
             Example13_RandomGenerator();
+
+            // ===== ПРИКЛАД 14: Передача масива в якості параметра =====
+            Console.WriteLine("\n📌 ПРИКЛАД 14: Передача масива в якості параметра");
+            Console.WriteLine("─────────────────────────────────────────────");
+            Example14_ArrayAsParameter();
+
+            // ===== ПРИКЛАД 15: Передача масива в якості параметра з використанням ключового слова params =====
+            Console.WriteLine("\n📌 ПРИКЛАД 15: Передача масива в якості параметра з використанням ключового слова params");
+            Console.WriteLine("─────────────────────────────────────────────");
+            Example15_ArrayAsParameterUsingParams();
         }
 
 
@@ -421,7 +431,7 @@ namespace Methods
             int sum = SumNumbers(5);
             Console.WriteLine($"Сума чисел від 1 до 5 = {sum}");
 
-            Console.WriteLine("\n🔄 Рекурсія - Піраміда:");
+            Console.WriteLine("\n🔄 Рекурсія - Трикутник:");
             DrawPyramid(5);
         }
 
@@ -529,6 +539,44 @@ namespace Methods
                 int randomIndex = random.Next(colors.Length); // Випадковий індекс
                 Console.WriteLine($"Колір {i + 1}: {colors[randomIndex]}");
             }
+        }
+
+        // ════════════════════════════════════════════════════════════════
+        // ПРИКЛАД 14: Передача масива в якості параметра
+        // ════════════════════════════════════════════════════════════════
+        static void Example14_ArrayAsParameter()
+        {
+            string[] cities = ["Київ", "Одеса", "Львів", "Дніпро", "Севастополь", "Краматорськ"];
+            PrintAll(cities);
+        }
+
+        static void PrintAll(string[] values)
+        {
+            foreach (string value in values)
+            {
+                Console.WriteLine(value);
+            }
+        }
+
+        // ════════════════════════════════════════════════════════════════
+        // ПРИКЛАД 15: Передача масива в якості параметра з використанням ключового слова params
+        // ════════════════════════════════════════════════════════════════
+        static void Example15_ArrayAsParameterUsingParams()
+        {
+            int sum = GetSumOfAllNumbers(0, 15, -2, 5, 12, 100, 100000, -100000, 3);
+            Console.WriteLine("Sum: {0}", sum);
+        }
+
+        static int GetSumOfAllNumbers(params int[] numbers)
+        {
+            int result = 0;
+
+            foreach (int number in numbers)
+            {
+                result += number;
+            }
+
+            return result;
         }
     }
 }
